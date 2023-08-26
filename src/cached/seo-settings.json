@@ -1,0 +1,20 @@
+[
+  {
+    "id" : "aca3671e-fe9b-11ed-be56-0242ac120002",
+    "name" : "SEO blacklist",
+    "description" : "SEO indexer blacklist",
+    "blacklist" : "404.html,cart.html,checkout.html,payment-pix.html,payment-pix.html,thank-you.html,.DS_Store,commerce-payment.html,http://localhost:8918/commerce-payment3.html"
+  },
+  {
+    "id" : "0ff54848-c781-11ed-afa1-0242ac120002",
+    "name" : "Search Engine Optimization Settings",
+    "defaultPageTitle" : "Nobre Imóveis",
+    "defaultSiteDescription" : "Nobre Imóveis",
+    "description" : "Andorra, oferecemos uma ampla variedade de seguros pessoais, residenciais, para empresas e automóveis. Proteja o que é importante para você. Peça uma cotação hoje mesmo! ",
+    "content" : "Nobre Imóveis",
+    "keywords" : "Nobre Imóveis, Seguros pessoais, seguros residenciais, seguros empresariais, seguros auto, Cotação de seguros, proteção financeira, seguradoras confiáveis, Seguro de vida, seguro residencial, seguro para negócios, seguro automóvel, Preços de seguros, cobertura abrangente, seguro de responsabilidade civil",
+    "author" : "Nobre Imóveis",
+    "robots" : "/robots.txt",
+    "favicon" : "images/favicon.png"
+  }
+]

@@ -1,0 +1,233 @@
+[
+  {
+    "id" : "b9c29334-d1c8-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "cId" : "8827d2c6-d1c8-11ed-afa1-0242ac120002",
+    "title" : "Contato",
+    "email01" : "thiago@nobreimoveis.com",
+    "email02" : "madayra@hotmail.com",
+    "phoneString" : "(11) 3731-7000",
+    "phoneNumber01String" : "(11) 93327-1855",
+    "phoneNumber01" : "+5511933271855",
+    "phoneNumber02String" : "(11) 4525-0578",
+    "phoneNumber02" : "+551142250578",
+    "address" : "Av. Francisco Nobre, 550 - Medeiros - Jundiaí - SP",
+    "whatsapp" : "+55 11 97181-5949",
+    "whatsappNumber" : "+5511971815949",
+    "whatsappLink" : "https://wa.me/5511971815949?text=Andorra",
+    "whatsappMessage" : "Encontrei o contato através do site...",
+    "facebook" : "https://pt-br.facebook.com/andorraseguros",
+    "linkedin" : "https://br.linkedin.com/in/andorra-benef%C3%ADcios-e-seguros-83863272",
+    "instagram" : "https://www.instagram.com/andorraseguros/",
+    "description" : "Bem-vindo à Nobre Imóveis, sua parceira confiável na jornada para encontrar o lar dos seus sonhos. Seja para compra, venda ou locação, estamos aqui para transformar suas aspirações imobiliárias em realidade"
+  },
+  {
+    "id" : "65ca8ef0-06c3-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "cId" : "8827d2c6-d1c8-11ed-afa1-0242ac120002",
+    "title" : "Marquee",
+    "text1" : "Venha conhecer todas as novidades da CandySodas",
+    "text2" : "As melhores marcas estão na CandySodas, venha conhecer todas nossas novidades",
+    "text3" : "Balas, Refrigerantes, Águas especiais..."
+  },
+  {
+    "id" : "453bbe46-c921-11ed-afa1-0242ac120002",
+    "cid" : "65ea3eb6-c920-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMenuMeta",
+    "menuItens" : {
+      "Home" : "/index.html",
+      "Sobre" : "/sobre.html",
+      "Clientes" : "/clientes.html",
+      "Projetos" : "/projetos.html",
+      "Contato" : "/contato.html",
+      "Área do Cliente" : "#"
+    }
+  },
+  {
+    "id" : "67f0861c-c848-11ed-afa1-0242ac120002",
+    "cid" : "0b59e998-c848-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Slider",
+    "slider1Img" : "slide1.jpg",
+    "slider1Txt" : "Casa 8 Arquitetura e Design",
+    "slider1Desc" : "Arquitetura",
+    "slider2Img" : "slide2.jpg",
+    "slider2Txt" : "Casa 8 Arquitetura e Design",
+    "slider2Desc" : "Design",
+    "slider3Img" : "slide2.jpg",
+    "slider3Txt" : "Casa 8 Arquitetura e Design",
+    "slider3Desc" : "Sofisticação"
+  },
+  {
+    "id" : "ac392262-dd91-11ed-b5ea-0242ac120002",
+    "cId" : "453bbe46-c921-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Arquitetura e Interiores",
+    "description" : "Na Casa 8 Arquitetura e Design, a sofisticação do ambiente é uma das principais metas em cada projeto. Acreditamos que um ambiente sofisticado é aquele que reflete a personalidade e o estilo de vida do cliente, ao mesmo tempo em que apresenta elementos de design elegantes e exclusivos"
+  },
+  {
+    "id" : "650660fe-01d0-11ee-be56-0242ac120002",
+    "cId" : "453bbe46-c921-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Carrousel de Marcar",
+    "description" : "",
+    "images" : {
+      "img1" : "clientes-sucos-sa.jpg",
+      "img2" : "clientes-loja-tim.jpg",
+      "img3" : "clientes-subway.jpg",
+      "img4" : "clientes-divino-fogao.jpg"
+    }
+  },
+  {
+    "id" : "7884bde4-0282-11ee-be56-0242ac120002",
+    "cId" : "453bbe46-c921-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Carrousel de Logotipos de Clientes",
+    "description" : "",
+    "images" : {
+      "img1" : "logotipo-clientes-1.jpg",
+      "img2" : "logotipo-clientes-2.jpg",
+      "img3" : "logotipo-clientes-3.jpg",
+      "img4" : "logotipo-clientes-4.jpg",
+      "img5" : "logotipo-clientes-5.jpg",
+      "img6" : "logotipo-clientes-6.jpg",
+      "img7" : "logotipo-clientes-7.jpg",
+      "img8" : "logotipo-clientes-8.jpg"
+    }
+  },
+  {
+    "id" : "3780618a-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Claro",
+    "featuredImage" : "logotipo-clientes-1.jpg"
+  },
+  {
+    "id" : "b426e4b6-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Vivo",
+    "featuredImage" : "logotipo-clientes-2.jpg"
+  },
+  {
+    "id" : "d65d038a-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "TIM",
+    "featuredImage" : "logotipo-clientes-3.jpg"
+  },
+  {
+    "id" : "dfaec766-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Bobs",
+    "featuredImage" : "logotipo-clientes-4.jpg"
+  },
+  {
+    "id" : "f0b22576-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Camicado",
+    "featuredImage" : "logotipo-clientes-5.jpg"
+  },
+  {
+    "id" : "0433c708-0301-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Cacau Show",
+    "featuredImage" : "logotipo-clientes-6.jpg"
+  },
+  {
+    "id" : "1b1ed372-0301-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Carmen Steffens",
+    "featuredImage" : "logotipo-clientes-7.jpg"
+  },
+  {
+    "id" : "309d517e-0301-11ee-be56-0242ac120002",
+    "cId" : "",
+    "metadataType" : "componentMeta",
+    "title" : "Os Mais Procurados",
+    "slug" : "",
+    "description" : "Aqui você encontra a relação dos produtos mais procurados na CandySodas",
+    "bloco01" : {
+      "sku1" : "5109",
+      "sku2" : "5107",
+      "sku3" : "5360",
+      "sku4" : "5004"
+    },
+    "bloco02" : {
+      "sku1" : "5006",
+      "sku2" : "5005",
+      "sku3" : "5007",
+      "sku4" : "5105"
+    },
+    "bloco03" : {
+      "sku1" : "5137",
+      "sku2" : "5252",
+      "sku3" : "5141",
+      "sku4" : "5142"
+    }
+  },
+  {
+    "id" : "87fe7702-06e1-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Banner Sidebar 01",
+    "slug" : "",
+    "featuredImage" : "banner-sidebar-01.jpg",
+    "permLink" : "/produtos.html"
+  },
+  {
+    "id" : "d9faf138-070a-11ee-be56-0242ac120002",
+    "cId" : "d9faf138-070a-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Recomendamos pra você",
+    "slug" : "Recomendamos estes produtos para você",
+    "featuredImage" : "",
+    "itens" : {
+      "sku1" : "5109",
+      "sku2" : "5107",
+      "sku3" : "5004",
+      "sku4" : "5252",
+      "sku5" : "5516"
+    }
+  },
+  {
+    "id" : "7cd2fc6a-296c-11ee-be56-0242ac120002",
+    "metadataType" : "componentMetaSecondaryBanner",
+    "title" : "Tabasco Bloody Mary Mix",
+    "featuredImage" : "banner_prod_01.jpg",
+    "permLink" : "/p/3eda5a26-05bc-11ee-be56-0242ac120002.html"
+  },
+  {
+    "id" : "b2349616-296c-11ee-be56-0242ac120002",
+    "metadataType" : "componentMetaSecondaryBanner",
+    "title" : "Jelly Belly HP Bertie Bott'ss Beans Box - Feijao Sabores Sortidos",
+    "featuredImage" : "banner_prod_04.jpg",
+    "permLink" : "/p/3eda4afe-05bc-11ee-be56-0242ac120002.html"
+  },
+  {
+    "id" : "b234994a-296c-11ee-be56-0242ac120002",
+    "metadataType" : "componentMetaSecondaryBanner",
+    "title" : "Juicy Fruit",
+    "featuredImage" : "banner_prod_05.jpg",
+    "permLink" : "#"
+  },
+  {
+    "id" : "b2349b20-296c-11ee-be56-0242ac120002",
+    "metadataType" : "componentMetaSecondaryBanner",
+    "title" : "Trident Spearming",
+    "featuredImage" : "banner_prod_06.jpg",
+    "permLink" : "/p/3eda5c9c-05bc-11ee-be56-0242ac120002.html"
+  }
+  
+]

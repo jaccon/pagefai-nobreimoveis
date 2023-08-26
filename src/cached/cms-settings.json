@@ -1,0 +1,12 @@
+[
+  {
+    "id" : "5e55ab38-42ea-11ee-be56-0242ac120002",
+    "metaType" : "preloader",
+    "status" : "disabled"
+  },
+  {
+    "id" : "5e55ab38-42ea-11ee-be56-0242ac120003",
+    "metaType" : "modalIdentify",
+    "status" : "enabled"
+  }
+]

@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticone410.ttf?8d4c26ef49003276f7da58375fa8b427") format("truetype"),
+url("../fonts/flaticone410.woff?8d4c26ef49003276f7da58375fa8b427") format("woff"),
+url("../fonts/flaticone410.woff2?8d4c26ef49003276f7da58375fa8b427") format("woff2"),
+url("../fonts/flaticone410.eot?8d4c26ef49003276f7da58375fa8b427#iefix") format("embedded-opentype"),
+url("../fonts/flaticone410.svg?8d4c26ef49003276f7da58375fa8b427#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-modern-house:before {
+    content: "\f101";
+}
+.flaticon-house:before {
+    content: "\f102";
+}
+.flaticon-buy:before {
+    content: "\f103";
+}
+.flaticon-sublease:before {
+    content: "\f104";
+}
+.flaticon-buyer:before {
+    content: "\f105";
+}
+.flaticon-mortgage:before {
+    content: "\f106";
+}
+.flaticon-house-insurance:before {
+    content: "\f107";
+}
+.flaticon-birthday-party:before {
+    content: "\f108";
+}
+.flaticon-apartment:before {
+    content: "\f109";
+}
