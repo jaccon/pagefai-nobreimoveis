@@ -48,7 +48,7 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
         <?php include('../components/preloader/preloader.inc.php'); ?>
         <?php include('../components/header/header.inc.php'); ?>
         <?php include('../components/slider/hero.inc.php'); ?>
-        <?php include('../components/anuncios/anuncios01.inc.php'); ?>
+        <?php include('../components/anuncios/anuncios01.inc.php'); // destaques ?>
         <?php include('../components/banners/default.inc.php'); ?>
         <?php include('../components/anuncios/anuncios02.inc.php'); ?>
         <?php include('../components/banners/beneficios.inc.php'); ?>
@@ -77,8 +77,8 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
         <script src="<?= $siteUrl; ?>assets/js/contact-form-script.js"></script>
         <script src="<?= $siteUrl; ?>assets/js/wow.min.js"></script>
         <script src="<?= $siteUrl; ?>assets/js/main.js"></script>
-        <script src="https://www.pagefai.com/assets/js/jquery.cookie.js"></script>
-        <script src="https://www.pagefai.com/assets/js/pagefai.js"></script>
+        <script src="<?= $siteUrl; ?>/assets/js/jquery.cookie.js"></script>
+        <script src="<?= $siteUrl; ?>/assets/js/pagefai.js"></script>
 
     </body>
 

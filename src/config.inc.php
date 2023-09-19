@@ -8,8 +8,8 @@ $CONFIG = array();
 $CONFIG['CONF']['appVersion']="01.0529.03";
 
 // PAGEFAI Configuration
-$CONFIG['CONF']['contractId']="62cb1ed620972f002157e3eb";
-$CONFIG['CONF']['userId']="62cb1c8420972f002157e3e9";
+$CONFIG['CONF']['contractId']="64c9ab96286e5c0021ad4c61";
+$CONFIG['CONF']['userId']="64c95ae5286e5c0021ad4c51";
 $CONFIG['CONF']['secrectKey']="xxxxxx";
 $CONFIG['CONF']['apiUrl']="https://dash-api-v1.pagefai.com";
 // $CONFIG['CONF']['apiUrl']="http://localhost:3333";

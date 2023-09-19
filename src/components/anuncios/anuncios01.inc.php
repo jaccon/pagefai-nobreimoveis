@@ -1,3 +1,7 @@
+<?php
+global $CONFIG;
+include('../components/realstate/realstate.inc.php'); 
+?>
 <div class="featured-area ptb-100">
             <div class="container">
                 <div class="section-title">
@@ -7,227 +11,73 @@
                 </div>
                 
                 <div class="featured-slides owl-carousel owl-theme">
-                    <div class="featured-item-box">
-                        <div class="featured-image">
-                            <a href="property-details.html"><img src="assets/images/featured/featured-large-1.jpg" alt="image"></a>
 
-                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
+                    <?php
+                        $jsonData = file_get_contents('../cached/realstate-ads.json');
+                        $data = json_decode($jsonData, true);
 
-                            <div class="featured-top-content">
-                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                <h3>
-                                    <a href="property-details.html">Modern Apartment With Pool</a>
-                                </h3>
-                                <p>$2,500</p>
-    
-                                <ul class="featured-list">
-                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                </ul>
+                        if ($data === null) {
+                            die("Failed to parse JSON data.");
+                        }
+
+                        $count = 0;
+                        $adsMax = 5;
+                        foreach ($data as $item) {
+
+                            if( $item['PublicationType'] === 'PREMIUM' AND $count <= $adsMax ) {
+                                $count++;
+                                $status = $item['status'];
+                                $title = $item['title'];
+                                $transactiontype = transactiontypeConvert($item['transactiontype']);
+                                $listingId = $item['ListingID'];
+                                $id = $item['id'];
+                                $listPrice = $item['ListPrice'];
+                                $ContactInfoName = $item['ContactInfoName'];
+                                $thumbnail = $item['ContactInfoLogo'];
+                                $featuredImage = $item['featuredImage'];
+                                $ConstructedArea = $item['ConstructedArea'];
+                                $RentalPrice = $item['RentalPrice'];
+
+                                if($item['transactiontype'] === 'For Rent') {
+                                    $price = $RentalPrice;
+                                } else {
+                                    $price = $listPrice;
+                                }
+
+                    ?>
+                        <div class="featured-item-box">
+                            <div class="featured-image featured-image-container">
+                                <a href="<?= $siteUrl; ?>imovel/<?= $id; ?>.html"><img src="<?= $featuredImage; ?>" alt="image"></a>
+
+                                <div class="tag">
+                                    <a href="<?= $siteUrl; ?>imovel/<?= $id; ?>.html">
+                                        <?= $transactiontype; ?>
+                                    </a>
+                                </div>
+
+                                <div class="featured-top-content">
+                                    <h3>
+                                        <a href="<?= $siteUrl; ?>imovel/<?= $id; ?>.html">
+                                            <?= $title ; ?>
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        <?= formatCurrency($price); ?>
+                                    </p>
+        
+                                </div>
+                            </div>
+                            
+                            <div class="featured-bottom-content">
+                                Cód. Anúncio: <?= $listingId; ?>
+
+                                <div class="featured-btn">
+                                    <a href="<?= $siteUrl; ?>imovel/<?= $id; ?>.html" class="default-btn"> Ver Imóvel <span></span></a>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="featured-bottom-content">
-                            <ul class="rating-list">
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li class="color-gray"><i class='bx bxs-star'></i></li>
-                                <li>Average</li>
-                            </ul>
+                    <?php }} ?>
 
-                            <div class="featured-btn">
-                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="featured-item-box">
-                        <div class="featured-image">
-                            <a href="property-details.html"><img src="assets/images/featured/featured-large-2.jpg" alt="image"></a>
-
-                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-
-                            <div class="featured-top-content">
-                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                <h3>
-                                    <a href="property-details.html">Luxury Villa in Los Angeles</a>
-                                </h3>
-                                <p>$2,500</p>
-    
-                                <ul class="featured-list">
-                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="featured-bottom-content">
-                            <ul class="rating-list">
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li class="color-gray"><i class='bx bxs-star'></i></li>
-                                <li>Average</li>
-                            </ul>
-
-                            <div class="featured-btn">
-                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="featured-item-box">
-                        <div class="featured-image">
-                            <a href="property-details.html"><img src="assets/images/featured/featured-large-3.jpg" alt="image"></a>
-
-                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-
-                            <div class="featured-top-content">
-                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                <h3>
-                                    <a href="property-details.html">Blue Reef Properties</a>
-                                </h3>
-                                <p>$2,500</p>
-    
-                                <ul class="featured-list">
-                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="featured-bottom-content">
-                            <ul class="rating-list">
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li class="color-gray"><i class='bx bxs-star'></i></li>
-                                <li>Average</li>
-                            </ul>
-
-                            <div class="featured-btn">
-                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="featured-item-box">
-                        <div class="featured-image">
-                            <a href="property-details.html"><img src="assets/images/featured/featured-large-1.jpg" alt="image"></a>
-
-                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-
-                            <div class="featured-top-content">
-                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                <h3>
-                                    <a href="property-details.html">Modern Apartment With Pool</a>
-                                </h3>
-                                <p>$2,500</p>
-    
-                                <ul class="featured-list">
-                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="featured-bottom-content">
-                            <ul class="rating-list">
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li class="color-gray"><i class='bx bxs-star'></i></li>
-                                <li>Average</li>
-                            </ul>
-
-                            <div class="featured-btn">
-                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="featured-item-box">
-                        <div class="featured-image">
-                            <a href="property-details.html"><img src="assets/images/featured/featured-large-2.jpg" alt="image"></a>
-
-                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-
-                            <div class="featured-top-content">
-                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                <h3>
-                                    <a href="property-details.html">Luxury Villa in Los Angeles</a>
-                                </h3>
-                                <p>$2,500</p>
-    
-                                <ul class="featured-list">
-                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="featured-bottom-content">
-                            <ul class="rating-list">
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li class="color-gray"><i class='bx bxs-star'></i></li>
-                                <li>Average</li>
-                            </ul>
-
-                            <div class="featured-btn">
-                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="featured-item-box">
-                        <div class="featured-image">
-                            <a href="property-details.html"><img src="assets/images/featured/featured-large-3.jpg" alt="image"></a>
-
-                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-
-                            <div class="featured-top-content">
-                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                <h3>
-                                    <a href="property-details.html">Blue Reef Properties</a>
-                                </h3>
-                                <p>$2,500</p>
-    
-                                <ul class="featured-list">
-                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="featured-bottom-content">
-                            <ul class="rating-list">
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li><i class='bx bxs-star'></i></li>
-                                <li class="color-gray"><i class='bx bxs-star'></i></li>
-                                <li>Average</li>
-                            </ul>
-
-                            <div class="featured-btn">
-                                <a href="property-details.html" class="default-btn">KNOW DETAILS <span></span></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="view-featured-btn">

@@ -51,10 +51,6 @@ class Commerce {
     
   }
 
-  
-
-
-
   static public function getCategoryTitle($id) {
 
     global $CONFIG;

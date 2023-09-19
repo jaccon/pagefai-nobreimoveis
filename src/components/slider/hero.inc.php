@@ -23,19 +23,11 @@ global $CONFIG;
                             </div>
     
                             <div class="bottom-content">
-
-                                <a href="#" class="default-btn"> Falar Corretor </a>
-    
-                                <div class="slides-btn">
-                                    <a href="#" 
-                                        class="default-btn"> Detalhes 
-                                    </a>
-                                </div>
+                                <a href="#" class="default-btn"> Ver o imóvel </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                
             </div>
         </div>

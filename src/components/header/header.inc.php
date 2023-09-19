@@ -20,9 +20,9 @@ $address = CMS::isComponent($metaId,"address");
                 <div class="container">
                     <div class="main-responsive-menu">
                         <div class="logo">
-                            <a href="index.html">
-                                <img src="assets/images/logotipo-nobreimoveis.svg" class="black-logo" alt="image">
-                                <img src="assets/images/logotipo-nobreimoveis.svg" class="white-logo" alt="image">
+                            <a href="<?= $siteUrl; ?>">
+                                <img src="<?= $siteUrl; ?>/assets/images/logotipo-nobreimoveis.svg" class="black-logo" alt="image">
+                                <img src="<?= $siteUrl; ?>/assets/images/logotipo-nobreimoveis.svg" class="white-logo" alt="image">
                             </a>
                         </div>
                     </div>
@@ -32,9 +32,9 @@ $address = CMS::isComponent($metaId,"address");
             <div class="main-navbar">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="assets/images/logotipo-nobreimoveis.png" class="black-logo" alt="image" width="180">
-                            <img src="assets/images/logotipo-nobreimoveis.png" class="white-logo" alt="image">
+                        <a class="navbar-brand" href="<?= $siteUrl; ?>">
+                            <img src="<?= $siteUrl; ?>/assets/images/logotipo-nobreimoveis.png" class="black-logo" alt="image" width="180">
+                            <img src="<?= $siteUrl; ?>/assets/images/logotipo-nobreimoveis.png" class="white-logo" alt="image">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -47,7 +47,7 @@ $address = CMS::isComponent($metaId,"address");
 
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="<?= $siteUrl; ?>" class="nav-link">
                                         Home 
                                     </a>
                                 </li>
@@ -87,10 +87,6 @@ $address = CMS::isComponent($metaId,"address");
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/parceiros.html" class="nav-link"> Parceiros </a>
-                                        </li>
-
-                                        <li class="nav-item">
                                             <a href="/politica-de-privacidade.html" class="nav-link"> Política de Privacidade </a>
                                         </li>
 
@@ -119,14 +115,14 @@ $address = CMS::isComponent($metaId,"address");
                                 </li>
     
                                 <li class="nav-item">
-                                    <a href="contact.html" class="nav-link"> Contato </a>
+                                    <a href="contato.html" class="nav-link"> Contato </a>
                                 </li>
 
                             </ul>
 
                             <div class="others-options d-flex align-items-center">
                                 <div class="option-item">
-                                    <a href="/anunciar-meu-imovel.html" class="default-btn"> Anunciar <span></span></a>
+                                    <a href="/anuncie-seu-imovel.html" class="default-btn"> Anunciar <span></span></a>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +144,7 @@ $address = CMS::isComponent($metaId,"address");
                         <div class="option-inner">
                             <div class="others-options d-flex align-items-center">
                                 <div class="option-item">
-                                    <a href="/anunciar-meu-imovel.html" class="default-btn"> Anunciar <span></span></a>
+                                    <a href="anuncie-seu-imovel.html" class="default-btn"> Anunciar <span></span></a>
                                 </div>
                             </div>
                         </div>

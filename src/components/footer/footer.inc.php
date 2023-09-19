@@ -27,7 +27,7 @@ $phoneNumber02Call = CMS::isComponent($metaId,"phoneNumber02");
                 <div class="single-footer-widget">
                     <div class="widget-logo">
                         <a href="/index.html">
-                            <img src="assets/images/logotipo-nobreimoveis-white.png" alt="image" with="100">
+                            <img src="<?= $siteUrl; ?>/assets/images/logotipo-nobreimoveis-white.png" alt="image" with="100">
                         </a>
                     </div>
 

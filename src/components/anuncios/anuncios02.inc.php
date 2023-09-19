@@ -164,7 +164,7 @@
                 </div>
 
                 <div class="view-properties-btn">
-                    <a href="listing.html" class="default-btn">VIEW ALL APARTMENT<span></span></a>
+                    <a href="listing.html" class="default-btn"> Ver todos os anúncios <span></span></a>
                 </div>
             </div>
         </div>

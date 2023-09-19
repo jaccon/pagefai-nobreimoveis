@@ -86,7 +86,9 @@
                 </div>
 
                 <div class="view-neighborhood-btn">
-                    <a href="neighborhood.html" class="default-btn">VIEW MORE NEIGHBORHOOD <span></span></a>
+                    <a href="neighborhood.html" class="default-btn">
+                     Ver todos os imóveis   
+                    <span></span></a>
                 </div>
             </div>
         </div>
