@@ -3,9 +3,9 @@ global $CONFIG;
 $siteUrl = $CONFIG['CONF']['siteUrl'];
 // Social Links
 $metaId = "b9c29334-d1c8-11ed-afa1-0242ac120002";
+$metaSeoId = $CONFIG['CONF']['metaIdSeo'];
+
 $whatsapp= CMS::isComponent($metaId,"whatsappLink");
-$instagram= CMS::isComponent($metaId,"instagram");
-$facebook= CMS::isComponent($metaId,"facebook");
 $phone = CMS::isComponent($metaId,"phoneString");
 $email01 = CMS::isComponent($metaId,"email01");
 $email02 = CMS::isComponent($metaId,"email02");
@@ -35,10 +35,10 @@ $phoneNumber02Call = CMS::isComponent($metaId,"phoneNumber02");
 
                     <ul class="widget-social">
                         <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                            <a href="<?= Seo::isSeo($metaSeoId, "social_facebook"); ?>" target="_blank"><i class='bx bxl-facebook'></i></a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            <a href="<?= Seo::isSeo($metaSeoId, "social_instagram"); ?>" target="_blank"><i class='bx bxl-instagram'></i></a>
                         </li>
                     </ul>
                 </div>

@@ -8,85 +8,85 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6">
                         <div class="single-neighborhood-box">
-                            <a href="property-details.html"><img src="assets/images/neighborhood/neighborhood-1.jpg" alt="image"></a>
+                            <a href="<?= $siteUrl; ?>/search.html?neighborhood=Medeiros"><img src="assets/images/neighborhood/neighborhood-1.jpg" alt="image"></a>
 
                             <div class="content">
                                 <h3>
-                                    <a href="property-details.html">New York City</a>
+                                    <a href="<?= $siteUrl; ?>/search.html?neighborhood=Medeiros"> Medeiros </a>
                                 </h3>
-                                <span>12 Properties</span>
+                                <span>54 Imóveis</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="single-neighborhood-box">
-                            <a href="property-details.html"><img src="assets/images/neighborhood/neighborhood-2.jpg" alt="image"></a>
+                            <a href="<?= $siteUrl; ?>/search.html?neighborhood=Jardim Carolina"><img src="assets/images/neighborhood/neighborhood-2.jpg" alt="image"></a>
 
                             <div class="content">
                                 <h3>
-                                    <a href="property-details.html">Australia</a>
+                                    <a href="<?= $siteUrl; ?>/search.html?neighborhood=Jardim Carolina"> Jardim Carolina </a>
                                 </h3>
-                                <span>22 Properties</span>
+                                <span>8 Imóveis </span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="single-neighborhood-box">
-                            <a href="property-details.html"><img src="assets/images/neighborhood/neighborhood-3.jpg" alt="image"></a>
+                            <a href="<?= $siteUrl; ?>/search.html?neighborhood=Eloy Chaves"><img src="assets/images/neighborhood/neighborhood-3.jpg" alt="image"></a>
 
                             <div class="content">
                                 <h3>
-                                    <a href="property-details.html">Canada</a>
+                                    <a href="<?= $siteUrl; ?>/search.html?neighborhood=Eloy Chaves"> Eloy Chaves</a>
                                 </h3>
-                                <span>33 Properties</span>
+                                <span>6 Imóveis</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="single-neighborhood-box">
-                            <a href="property-details.html"><img src="assets/images/neighborhood/neighborhood-4.jpg" alt="image"></a>
+                            <a href="<?= $siteUrl; ?>/search.html?neighborhood=Centro"><img src="assets/images/neighborhood/neighborhood-4.jpg" alt="image"></a>
 
                             <div class="content">
                                 <h3>
-                                    <a href="property-details.html">Japan</a>
+                                    <a href="<?= $siteUrl; ?>/search.html?neighborhood=Centro"> Centro </a>
                                 </h3>
-                                <span>15 Properties</span>
+                                <span>5 Imóveis</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="single-neighborhood-box">
-                            <a href="property-details.html"><img src="assets/images/neighborhood/neighborhood-5.jpg" alt="image"></a>
+                            <a href="<?= $siteUrl; ?>/search.html?neighborhood=Jardim das Tulipas"><img src="assets/images/neighborhood/neighborhood-5.jpg" alt="image"></a>
 
                             <div class="content">
                                 <h3>
-                                    <a href="property-details.html">United States</a>
+                                    <a href="<?= $siteUrl; ?>/search.html?neighborhood=Jardim das Tulipas">Jardim das Tulipas</a>
                                 </h3>
-                                <span>38 Properties</span>
+                                <span>5 Imóveis</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6">
                         <div class="single-neighborhood-box">
-                            <a href="property-details.html"><img src="assets/images/neighborhood/neighborhood-6.jpg" alt="image"></a>
+                            <a href="<?= $siteUrl; ?>/search.html?neighborhood=Jundiaí Mirim"><img src="assets/images/neighborhood/neighborhood-6.jpg" alt="image"></a>
 
                             <div class="content">
                                 <h3>
-                                    <a href="property-details.html">Dubai</a>
+                                    <a href="<?= $siteUrl; ?>/search.html?neighborhood=Jundiaí Mirim"> Jundiaí Mirim</a>
                                 </h3>
-                                <span>54 Properties</span>
+                                <span>5 Imóveis</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="view-neighborhood-btn">
-                    <a href="neighborhood.html" class="default-btn">
+                    <a href="<?= $siteUrl; ?>/imoveis.html" class="default-btn">
                      Ver todos os imóveis   
                     <span></span></a>
                 </div>

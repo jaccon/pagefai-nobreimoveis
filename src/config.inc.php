@@ -23,6 +23,8 @@ $CONFIG['CONF']['pixKey']= "26532649864";
 $CONFIG['CONF']['defaultPageTitle']="Andorra";
 $CONFIG['CONF']['siteUrl']="http://localhost:8926/";
 // $CONFIG['CONF']['siteUrl']="https://nobreimoveis.pagefai.com/";
+$CONFIG['CONF']['metaIdSeo']="0ff54848-c781-11ed-afa1-0242ac120002"; // id meta Seo settings
+$CONFIG['CONF']['metaIdSeoBreadCrumb']="7c3b5a16-440d-11ee-be56-0242ac120002"; // id meta Seo BreadCrumbs
 $CONFIG['CONF']['assets']=$CONFIG['CONF']['siteUrl']."/assets/";
 $CONFIG['CONF']['sitePrdUrl']="#";
 $CONFIG['CONF']['siteDevUrl']="#";
@@ -49,5 +51,6 @@ include($CONFIG['CONF']['coreDir']."/payments.class.php");
 include($CONFIG['CONF']['coreDir']."/reviews.class.php");
 include($CONFIG['CONF']['coreDir']."/seo.class.php");
 include($CONFIG['CONF']['coreDir']."/newsletter.class.php");
+include($CONFIG['CONF']['coreDir']."/forms.class.php");
 
 ?>

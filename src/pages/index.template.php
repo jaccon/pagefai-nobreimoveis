@@ -21,6 +21,14 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Pagefai CMS">
+        <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+        <meta name="description" content="<?= $siteDescription; ?>">
+        <meta name="keywords" content="<?= $keywords; ?>">
+        <meta name="author" content="<?= $siteAuthor; ?>">
+        <?= Seo::structuredDataOrganization(); // structured data for SEO ?>
+        <?= Seo::structuredDataBreadcrumb(); // structured data breadCrumb for SEO ?>
+
         <link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/animate.min.css">
         <link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/meanmenu.css">

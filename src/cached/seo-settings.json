@@ -8,13 +8,36 @@
   {
     "id" : "0ff54848-c781-11ed-afa1-0242ac120002",
     "name" : "Search Engine Optimization Settings",
-    "defaultPageTitle" : "Nobre Imóveis",
+    "defaultPageTitle" : "Nobre Imóveis - Na Nobre Imóveis, acreditamos que cada lar tem uma história a contar, e é nossa missão ajudar você a encontrar o lugar perfeito para escrever a sua. Há mais de uma década, temos orgulho de ser uma referência em serviços imobiliários de qualidade, servindo a comunidade de Jundiaí e arredores.",
     "defaultSiteDescription" : "Nobre Imóveis",
-    "description" : "Andorra, oferecemos uma ampla variedade de seguros pessoais, residenciais, para empresas e automóveis. Proteja o que é importante para você. Peça uma cotação hoje mesmo! ",
-    "content" : "Nobre Imóveis",
-    "keywords" : "Nobre Imóveis, Seguros pessoais, seguros residenciais, seguros empresariais, seguros auto, Cotação de seguros, proteção financeira, seguradoras confiáveis, Seguro de vida, seguro residencial, seguro para negócios, seguro automóvel, Preços de seguros, cobertura abrangente, seguro de responsabilidade civil",
+    "description" : "Nobre Imóveis - Na Nobre Imóveis, acreditamos que cada lar tem uma história a contar, e é nossa missão ajudar você a encontrar o lugar perfeito para escrever a sua. Há mais de uma década, temos orgulho de ser uma referência em serviços imobiliários de qualidade, servindo a comunidade de Jundiaí e arredores.",
+    "content" : "Nobre Imóveis - Na Nobre Imóveis, acreditamos que cada lar tem uma história a contar, e é nossa missão ajudar você a encontrar o lugar perfeito para escrever a sua. Há mais de uma década, temos orgulho de ser uma referência em serviços imobiliários de qualidade, servindo a comunidade de Jundiaí e arredores.",
+    "keywords" : "Imóveis em Jundiaí, Corretora de Imóveis, Venda de Imóveis, Aluguel de Imóveis, Apartamentos em Jundiaí, Casas à venda, Terrenos em Jundiaí, Consultoria Imobiliária, Mercado Imobiliário, Investimento em Imóveis, Imobiliária Nobre, Jundiaí SP, Compra de Imóveis, Imóveis de Luxo, Negociação Imobiliária, Avaliação de Imóveis, Imobiliária confiável, Imóveis Comerciais em Jundiaí, Condomínios em Jundiaí, Imóveis para famílias.",
     "author" : "Nobre Imóveis",
     "robots" : "/robots.txt",
-    "favicon" : "images/favicon.png"
+    "favicon" : "images/favicon.png",
+    "logo" : "logotipo-acalanto.png",
+    "social_facebook" : "https://www.facebook.com/Nobre-Im%C3%B3veis-100108634781060/?ref=br_rs",
+    "social_instagram" : "https://www.instagram.com/nobreimoveisjundiai/?hl=pt-br",
+    "social_youtube" : "",
+    "social_linkedin" : ""
+  },
+  {
+    "id" : "7c3b5a16-440d-11ee-be56-0242ac120002",
+    "name" : "BreadcrumbList",
+    "BreadcrumbList" : {
+      "Home" : "index.html",
+      "Imóveis" : "imoveis.html",
+      "Imóveis para locação" : "imoveis-para-locacao.html",
+      "Imóveis para comprar" : "imoveis-para-compra.html",
+      "Imóveis Lançamento" : "imoveis-lancamentos.html",
+      "Imóveis Tour Virtual 360" : "tour-virtual-360.html",
+      "Quem Somos" : "quem-somos.html",
+      "Política de Privacidade" : "politica-de-privacidade.html",
+      "Peça seu Imóvel" : "peca-seu-imovel.html",
+      "Anuncie seu Imóvel" : "anuncie-seu-imovel.html",
+      "Contato" : "contato.html"
+    }
   }
 ]
+

@@ -81,7 +81,7 @@ include('../components/realstate/realstate.inc.php');
                 </div>
 
                 <div class="view-featured-btn">
-                    <a href="/imoveis-em-destaque.html" class="default-btn"> Ver todos imóveis <span></span></a>
+                    <a href="/imoveis.html" class="default-btn"> Ver todos imóveis <span></span></a>
                 </div>
             </div>
         </div>

@@ -53,7 +53,7 @@ $address = CMS::isComponent($metaId,"address");
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="<?= $siteUrl; ?>/imoveis.html" class="nav-link">
                                         Imóveis 
                                         <i class='bx bx-chevron-down'></i>
                                     </a>

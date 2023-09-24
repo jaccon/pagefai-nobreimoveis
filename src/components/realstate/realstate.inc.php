@@ -78,5 +78,44 @@ function getFirstImageFromJson($json) {
   return null; 
 }
 
+// list all real state ads
+function listAds($filter=null) {
+    global $CONFIG;
+    $file = $CONFIG['CONF']['cacheDir']."/realstate-ads.json";
+
+    if(file_exists($file)){
+      $data =  file_get_contents($file);
+    }
+
+    $objitems = json_decode($data);
+
+    return $objitems;
+}
+
+function searchAds($s) {
+
+  $data = listAds();
+  $results = array();
+
+  foreach ($data as $item) {
+
+    $lowercaseS = strtolower($s);
+    $lowercaseTitle = strtolower($item->title);
+
+    if( $item->id === $s || $item->ListingID === $s || strpos($lowercaseTitle, $lowercaseS) !== false || $item->id === $s){
+        $results[] = $item;
+    }
+  }
+
+  return $results;
+
+}
+
+function getSelectedFormOption($id, $form) {
+  if($id === $form) {
+    return "selected";
+  }
+}
+
 
 ?>

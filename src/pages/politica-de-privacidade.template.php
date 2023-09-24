@@ -24,7 +24,13 @@ $title = "Política de Privacidade";
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <meta name="author" content="Pagefai CMS">
+        <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+        <meta name="description" content="<?= $siteDescription; ?>">
+        <meta name="keywords" content="<?= $keywords; ?>">
+        <meta name="author" content="<?= $siteAuthor; ?>">
+        <?= Seo::structuredDataOrganization(); // structured data for SEO ?>
+        <?= Seo::structuredDataBreadcrumb(); // structured data breadCrumb for SEO ?>
         <link rel="stylesheet" href="<?= $siteUrl; ?>/<?= $siteiUrl; ?>/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?= $siteUrl; ?>/<?= $siteiUrl; ?>/assets/css/animate.min.css">
         <link rel="stylesheet" href="<?= $siteUrl; ?>/<?= $siteiUrl; ?>/assets/css/meanmenu.css">
@@ -244,78 +250,7 @@ Caso tenha dúvidas sobre esta Política de Privacidade ou sobre os dados pessoa
             </div>
         </div>
 
-        <div class="facilities-area bg-f7fefe pt-100 pb-70">
-            <div class="container">
-                <div class="section-title">
-                    <h3>Facilities of Our Fido</h3>
-                    <p>Proin gravida nibh vel velit auctor aliquet aenean sollicitudin lorem quis bibendum auctor nisi elit consequat ipsum nec sagittis sem nibh id elit.</p>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-facilities">
-                            <div class="image">
-                                <img src="assets/images/facilities/facilities-1.png" alt="image">
-                            </div>
-
-                            <h3>No Revenue Loss</h3>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-facilities">
-                            <div class="image">
-                                <img src="assets/images/facilities/facilities-2.png" alt="image">
-                            </div>
-                            
-                            <h3>6 Month Free Service</h3>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-facilities">
-                            <div class="image">
-                                <img src="assets/images/facilities/facilities-3.png" alt="image">
-                            </div>
-                            
-                            <h3>24/7 Service</h3>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-facilities">
-                            <div class="image">
-                                <img src="assets/images/facilities/facilities-4.png" alt="image">
-                            </div>
-                            
-                            <h3>Low Price</h3>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-facilities">
-                            <div class="image">
-                                <img src="assets/images/facilities/facilities-5.png" alt="image">
-                            </div>
-                            
-                            <h3>Value Relationship</h3>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-facilities">
-                            <div class="image">
-                                <img src="assets/images/facilities/facilities-6.png" alt="image">
-                            </div>
-                            
-                            <h3>Easy Installment</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
+        <?php include('../components/banners/beneficios.inc.php'); ?>
         <?php include('../components/footer/footer.inc.php'); ?>
 
         <div class="go-top">

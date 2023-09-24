@@ -15,7 +15,7 @@ $siteDescription = Seo::isSeo($metaIdSeo, "description");
 $siteAuthor = Seo::isSeo($metaIdSeo, "author");
 $keywords = Seo::isSeo($metaIdSeo, "keywords");
 $favicon = Seo::isSeo($metaIdSeo, "favicon");
-$title = "Imóveis para Compra";
+$title = "Imóveis";
 
 // data
 include('../components/realstate/realstate.inc.php');
@@ -30,13 +30,7 @@ $itemCount = count($data);
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="author" content="Pagefai CMS">
-        <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
-        <meta name="description" content="<?= $siteDescription; ?>">
-        <meta name="keywords" content="<?= $keywords; ?>">
-        <meta name="author" content="<?= $siteAuthor; ?>">
-        <?= Seo::structuredDataOrganization(); // structured data for SEO ?>
-        <?= Seo::structuredDataBreadcrumb(); // structured data breadCrumb for SEO ?>
+
         <link rel="stylesheet" href="<?= $siteUrl; ?>/<?= $siteiUrl; ?>/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?= $siteUrl; ?>/<?= $siteiUrl; ?>/assets/css/animate.min.css">
         <link rel="stylesheet" href="<?= $siteUrl; ?>/<?= $siteiUrl; ?>/assets/css/meanmenu.css">
@@ -96,20 +90,7 @@ $itemCount = count($data);
                     <div class="row justify-content-center">
 
                         <style>
-                        .image-container {
-                            width: 424px;
-                            height: 283px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            overflow: hidden;
-                            }
-
-                            .image-container img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
+                        
 
                         </style>
 
@@ -124,7 +105,7 @@ $itemCount = count($data);
 
                             foreach ($data as $item) {
 
-                                if( $item['transactiontype'] === 'For Sale') {
+                                if( $item['status'] === 'enabled') {
 
                                     $status = $item['status'];
                                     $title = $item['title'];

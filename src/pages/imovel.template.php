@@ -40,6 +40,10 @@ if($transactiontype === 'For Rent') {
     $price = formatCurrency($priceList);
 }
 
+// data
+$jsonData = file_get_contents('../cached/realstate-ads.json');
+$data = json_decode($jsonData, true);
+$itemCount = count($data);
 
 ?>
 <!doctype html>
@@ -362,67 +366,51 @@ if($transactiontype === 'For Rent') {
                             </div>
 
                             <div class="widget widget_fido_property">
-                                <h3 class="widget-title"> Imóveis deste corretor </h3>
+                                <h3 class="widget-title"> Outros Imóveis deste corretor </h3>
     
+
+                                <?php 
+
+                                    $count = 0;
+                                    $max = 2;
+                                    foreach ($data as $item) {
+
+                                        if( $item['status'] === 'enabled' && $count <= $max ) {
+                                            $status = $item['status'];
+                                            $title = $item['title'];
+                                            $transactiontype = transactiontypeConvert($item['transactiontype']);
+                                            $listingId = $item['ListingID'];
+                                            $id = $item['id'];
+                                                $listPrice = $item['ListPrice'];
+                                                $ContactInfoName = $item['ContactInfoName'];
+                                                $thumbnail = $item['ContactInfoLogo'];
+                                                $featuredImage = $item['featuredImage'];
+                                                $ConstructedArea = $item['ConstructedArea'];
+                                                $count++;
+                                ?>
                                 <article class="item">
-                                    <a href="property-details.html" class="thumb">
+                                    <a href="<?= $siteUrl; ?>/imovel/<?= $id; ?>.html" class="thumb">
                                         <span class="fullimage cover bg1" role="img"></span>
                                     </a>
     
                                     <div class="info">
                                         <h4 class="title usmall">
-                                            <a href="property-details.html">Modern Apartment With Pool</a>
+                                            <a href="<?= $siteUrl; ?>/imovel/<?= $id; ?>.html">
+                                                <?= $title; ?>
+                                            </a>
                                         </h4>
-                                        <span><i class='bx bx-map'></i> 64 1st Avenue</span>
-                                        <div class="tag">For Sell</div>
-                                        <div class="price">$2,500</div>
+                                        <span>
+                                            Cód. Anúncio: <?= $listingId; ?>
+                                        </span>
+                                        <div class="tag"><?= $transactiontype; ?> </div>
+                                        <div class="price">
+                                            <?= formatCurrency($listPrice); ?>
+                                        </div>
                                     </div>
                                 </article>
 
-                                <article class="item">
-                                    <a href="property-details.html" class="thumb">
-                                        <span class="fullimage cover bg2" role="img"></span>
-                                    </a>
-    
-                                    <div class="info">
-                                        <h4 class="title usmall">
-                                            <a href="property-details.html">Luxury Villa in Los Angeles</a>
-                                        </h4>
-                                        <span><i class='bx bx-map'></i> 64 1st Avenue</span>
-                                        <div class="tag">For Sell</div>
-                                        <div class="price">$2,500</div>
-                                    </div>
-                                </article>
+                                <?php } }  ?>
 
-                                <article class="item">
-                                    <a href="property-details.html" class="thumb">
-                                        <span class="fullimage cover bg3" role="img"></span>
-                                    </a>
-    
-                                    <div class="info">
-                                        <h4 class="title usmall">
-                                            <a href="property-details.html">Blue Reef Properties</a>
-                                        </h4>
-                                        <span><i class='bx bx-map'></i> 64 1st Avenue</span>
-                                        <div class="tag">For Sell</div>
-                                        <div class="price">$2,500</div>
-                                    </div>
-                                </article>
-
-                                <article class="item">
-                                    <a href="property-details.html" class="thumb">
-                                        <span class="fullimage cover bg4" role="img"></span>
-                                    </a>
-    
-                                    <div class="info">
-                                        <h4 class="title usmall">
-                                            <a href="property-details.html">Sky Villa Apartment </a>
-                                        </h4>
-                                        <span><i class='bx bx-map'></i> 64 1st Avenue</span>
-                                        <div class="tag">For Sell</div>
-                                        <div class="price">$2,500</div>
-                                    </div>
-                                </article>
                             </div>
 
                             <div class="widget widget_top-properties">
