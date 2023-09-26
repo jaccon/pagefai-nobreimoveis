@@ -1,0 +1,15 @@
+[
+  {
+    "id" : "40e01410-c781-11ed-afa1-0242ac120002",
+    "title" : "Nobre Imóveis",
+    "subject" : "Nobre Imóveis - Contato",
+    "emailTo" : "jaccon@gmail.com",
+    "replyTo" : "jaccon@gmail.com",
+    "emailToAlias" : "Pagefai Tecnologia ®",
+    "emailToCopy" : "jaccon@gmail.com",
+    "thankYouEmailMessage" : "Obrigado por ter entrado em contato com a Acalanto. Em breve retornaremos",
+    "thankYouEmailSubject" : "Acalanto contato - recebemos sua mensagem...",
+    "status" : "enabled",
+    "addToLeads" : "enabled"
+  }
+]

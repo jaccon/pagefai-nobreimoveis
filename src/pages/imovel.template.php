@@ -1,7 +1,7 @@
 <?php
 global $CONFIG;
 include('../config.inc.php');
-include('../components/realstate/realstate.inc.php');
+require('../components/realstate/realstate.inc.php');
 $siteUrl = $CONFIG['CONF']['siteUrl'];
 
 $id=$_REQUEST['id'];

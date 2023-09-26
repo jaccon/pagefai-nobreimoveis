@@ -20,7 +20,7 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
 $title = "Pesquisa";
 
 // data
-include('../components/realstate/realstate.inc.php');
+require('../components/realstate/realstate.inc.php');
 $jsonData = file_get_contents('../cached/realstate-ads.json');
 $data = json_decode($jsonData, true);
 $itemCount = count($data);

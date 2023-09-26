@@ -42,6 +42,7 @@ $CONFIG['CONF']['currency']= "R$ ";
 $CONFIG['CONF']['localImagesRepositoryUrl']="/assets/images";
 $CONFIG['CONF']['remoteCDNStatus']= "disable";
 $CONFIG['CONF']['remoteCDN']= "https://statics.pagefai.com/".$CONFIG['CONF']['contractId']."/";
+$CONFIG['CONF']['debugForms']= false; 
 
 // Core Application
 include($CONFIG['CONF']['coreDir']."/cms.class.php");

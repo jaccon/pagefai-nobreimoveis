@@ -1,6 +1,6 @@
 <?php
 global $CONFIG;
-include('../components/realstate/realstate.inc.php'); 
+//require('../components/realstate/realstate.inc.php'); 
 ?>
 <div class="featured-area ptb-100">
             <div class="container">

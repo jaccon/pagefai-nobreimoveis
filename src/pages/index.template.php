@@ -15,6 +15,9 @@ $siteDescription = Seo::isSeo($metaIdSeo, "description");
 $siteAuthor = Seo::isSeo($metaIdSeo, "author");
 $keywords = Seo::isSeo($metaIdSeo, "keywords");
 $favicon = Seo::isSeo($metaIdSeo, "favicon");
+
+require('../components/realstate/realstate.inc.php');
+
 ?>
 <!doctype html>
 <html lang="zxx">
