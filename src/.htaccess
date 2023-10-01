@@ -32,5 +32,7 @@ ErrorDocument 404 /404.html
 
 # Sitemap XML
 RewriteRule ^sitemap.xml$ core/sitemaps/sitemap.php [L]
+RewriteRule ^sitemapv2.xml$ core/sitemaps/sitemap.php [L]
+RewriteRule ^sitemap-ads.xml$ core/sitemaps/sitemap-ads.php [L]
 # === End Rewrite Custom
 

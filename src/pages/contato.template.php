@@ -171,28 +171,37 @@ $title = "Contato";
 
                                 </div>
                             </form>
+
+                            <div id="pagefai-form-success" style="display:none;">
+                                <h3> Sua mensagem foi enviada com sucesso, em breve iremos responder </h3>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-12">
                         <div class="contact-address">
-                            <h3>Contact Address:</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h3>Endereço</h3>
 
                             <ul class="address-info">
                                 <li>
                                     <i class='bx bxs-map'></i>
-                                    48 Brooke Street, New York United States of America
+                                    Av. Francisco Nobre, 550 - Medeiros - Jundiaí - SP
                                 </li>
 
                                 <li>
                                     <i class='bx bxs-phone'></i>
-                                    <a href="tel:000123456789">+000 123 456 789</a>
+                                    <a href="tel:1145250578">(11) 4525-0578</a> <br/>
+                                    <a href="tel:11933271855">(11) 93327-1855</a>
                                 </li>
 
                                 <li>
                                     <i class='bx bx-envelope'></i>
-                                    <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#78101d141417381e111c17561b1715"><span class="__cf_email__" data-cfemail="92faf7fefefdd2f4fbf6fdbcf1fdff">[email&#160;protected]</span></a>
+                                    <a href="mailto:thiago@nobreimoveis.com">
+                                        thiago@nobreimoveis.com 
+                                    </a> <br/>
+                                    <a href="mailto:madayra@hotmail.com">
+                                        madayra@hotmail.com
+                                    </a>
                                 </li>
                             </ul>
                         </div>

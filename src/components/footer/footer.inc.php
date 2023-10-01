@@ -15,7 +15,7 @@ $addr = CMS::isComponent($metaId,"address");
 $phoneNumber01 = CMS::isComponent($metaId,"phoneNumber01String");
 $phoneNumber01Call = CMS::isComponent($metaId,"phoneNumber01");
 
-$phoneNumber02 = CMS::isComponent($metaId,"phoneNumber01String");
+$phoneNumber02 = CMS::isComponent($metaId,"phoneNumber02String");
 $phoneNumber02Call = CMS::isComponent($metaId,"phoneNumber02");
 
 ?>
@@ -87,10 +87,7 @@ $phoneNumber02Call = CMS::isComponent($metaId,"phoneNumber02");
                             <?= $email02; ?>
                         </li>
 
-                        <li>
-                            <i class='bx bx-time'></i>
-                            9 AM - 5 PM (Sun-Thur)
-                        </li>
+                       
                     </ul>
                 </div>
             </div>
@@ -119,5 +116,14 @@ $phoneNumber02Call = CMS::isComponent($metaId,"phoneNumber02");
 </footer>
 
     <?php include('../components/whatsapp-button.inc.php'); ?>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y2Z2PBMYK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3Y2Z2PBMYK');
+    </script>
 
     

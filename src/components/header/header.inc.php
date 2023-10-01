@@ -100,22 +100,23 @@ $address = CMS::isComponent($metaId,"address");
                                     </a>
 
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a href="/peca-seu-imovel.html" class="nav-link"> Peça seu Imóvel </a>
-                                        </li>
+                                        </li> -->
 
                                         <li class="nav-item">
                                             <a href="/anuncie-seu-imovel.html" class="nav-link"> Anuncie seu Imóvel </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a href="/simule-um-financiamento.html" class="nav-link"> Simule um Financiamento </a>
+                                            <a href="<?= $siteUrl; ?>/simulacao-de-financiamento.html" class="nav-link"> 
+                                            Simule um Financiamento </a>
                                         </li>
                                     </ul>
                                 </li>
     
                                 <li class="nav-item">
-                                    <a href="contato.html" class="nav-link"> Contato </a>
+                                    <a href="<?= $siteUrl; ?>/contato.html" class="nav-link"> Contato </a>
                                 </li>
 
                             </ul>

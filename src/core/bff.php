@@ -105,7 +105,6 @@ if($midlewareFunction === 'newsletter-signup') {
               echo 0; // 0 to no erros
           }
       } else {
-          
           echo 1;
       }
 

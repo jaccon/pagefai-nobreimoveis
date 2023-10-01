@@ -15,14 +15,7 @@ $siteDescription = Seo::isSeo($metaIdSeo, "description");
 $siteAuthor = Seo::isSeo($metaIdSeo, "author");
 $keywords = Seo::isSeo($metaIdSeo, "keywords");
 $favicon = Seo::isSeo($metaIdSeo, "favicon");
-$title = "Imóveis Tour Virtual";
-
-// data
-require('../components/realstate/realstate.inc.php');
-$jsonData = file_get_contents('../cached/realstate-ads.json');
-$data = json_decode($jsonData, true);
-$itemCount = count($data);
-
+$title = "Simulação de Financiamento";
 ?>
 <!doctype html>
 <html lang="zxx">
@@ -86,109 +79,39 @@ $itemCount = count($data);
                 <img src="<?= $siteiUrl; ?>/assets/images/page-banner.png" alt="image">
             </div>
         </div>
-        <!-- End Page Banner Area -->
-
-        <!-- Start Blog Area -->
-        <div class="blog-area-without-color ptb-100">
+        
+        <!-- Form -->
+        <div class="submit-property-area ptb-100">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-12">
-                    <div class="row justify-content-center">
+               <p> Escolha uma das empresas para simular seu financiamento. <br/> Ao clicar em um dos links vocês será direcionado para o site do banco </p>
 
-                        <style>
-                        
+               <p>
+                 <a href="https://credito-imobiliario.itau.com.br/" target="_blank"> 
+                    <img src="<?= $siteUrl; ?>/assets/images/itau.png" alt="Itaú" width="80"> </a>
+               </p>
 
-                        </style>
+               <p>
+                 <a href="https://www.santander.com.br/hotsite/credito-financiamento-imobiliario/?ic=homepf-cardsprod-creditoimobiliario#/dados-pessoais" target="_blank"> 
+                    <img src="<?= $siteUrl; ?>/assets/images/santander.png" alt="Santander" width="120"> 
+                  </a>
+               </p>
 
-                        <?php 
+               <p>
+                 <a href="https://www42.bb.com.br/portalbb/imobiliario/creditoimobiliario/simular,802,2250,2250.bbx?eni_gclid=Cj0KCQjwp86EBhD7ARIsAFkgakg39StNF0YBE3S5bgNiBlnuM-BMJd6hXU5ACfQtaweeFYraleQ5fqUaAlvvEALw_wcB&pk_vid=e096ac2feeed30bf162033156524f1ab" target="_blank"> 
+                 <img src="<?= $siteUrl; ?>/assets/images/bb.png" alt="Santander" width="120">  </a>
+               </p>
 
-                            $jsonData = file_get_contents('../cached/realstate-ads.json');
-                            $data = json_decode($jsonData, true);
+               <p>
+                 <a href="https://banco.bradesco/html/classic/produtos-servicos/emprestimo-e-financiamento/encontre-seu-credito/simuladores-imoveis.shtm#box1-comprar" target="_blank"> 
+                  <img src="<?= $siteUrl; ?>/assets/images/bradesco.png" alt="Bradesco" width="160">
+                 </a>
+               </p>
 
-                            if ($data === null) {
-                                die("Failed to parse JSON data.");
-                            }
-
-                            foreach ($data as $item) {
-
-                                if( $item['VirtualTourLink'] != '') {
-
-                                    $status = $item['status'];
-                                    $title = $item['title'];
-                                    $transactiontype = transactiontypeConvert($item['transactiontype']);
-                                    $listingId = $item['ListingID'];
-                                    $id = $item['id'];
-                                    $listPrice = $item['ListPrice'];
-                                    $ContactInfoName = $item['ContactInfoName'];
-                                    $thumbnail = $item['ContactInfoLogo'];
-                                    $featuredImage = $item['featuredImage'];
-                                    $ConstructedArea = $item['ConstructedArea'];
-                        ?>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="blog-item bottom-30">
-                                    <a href="<?= $siteUrl; ?>/imovel/<?= $id; ?>.html">
-                                        <!-- <img src="<?= $siteiUrl; ?>/assets/images/blog/blog-1.jpg" alt="image"> -->
-                                        <div class="image-container">
-                                            <img src="<?= $featuredImage; ?>" alt="image">
-                                        </div>
-                                    </a>
-
-                                    <div class="blog-content">
-                                        <span>
-                                            <a href="blog-details.html">
-                                                <?= $transactiontype; ?>
-                                            </a>
-                                        </span>
-                                        <h3>
-                                            <a href="blog-details.html">
-                                                <?= $title; ?>
-                                            </a>
-                                        </h3>
-                                        <p> <?= $ConstructedArea; ?> m2 | Cód. <?= $listingId; ?> </p>
-                                    </div>
-
-                                    <div class="blog-bottom-content d-flex justify-content-between align-items-center">
-                                        <div class="blog-author d-flex align-items-center">
-                                            <img src="<?= $thumbnail; ?>" class="rounded-circle" alt="image">
-                                            <span>
-                                                <a href="#">
-                                                    <?= $ContactInfoName; ?>
-                                                </a>
-                                            </span>
-                                        </div>
-                                        <p>
-                                            <strong> <?= formatCurrency($listPrice); ?> </strong> 
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        <?php } }  ?>
-
-
-
-
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <div class="pagination-area">
-                                <a href="#" class="prev page-numbers"><i class='bx bx-chevron-left'></i></a>
-                                <span class="page-numbers current" aria-current="page">1</span>
-                                <a href="#" class="page-numbers">2</a>
-                                <a href="#" class="page-numbers">3</a>
-                                <a href="#" class="page-numbers">4</a>
-                                <a href="#" class="next page-numbers"><i class='bx bx-chevron-right'></i></a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-12">
-                        <?php include('../components/adsFilters/filter.inc.php'); ?>
-                    </div>
-                </div>
             </div>
         </div>
-        
+        <!-- Form -->
+
+        <?php include('../components/banners/beneficios.inc.php'); ?>
         <?php include('../components/footer/footer.inc.php'); ?>
 
         <div class="go-top">

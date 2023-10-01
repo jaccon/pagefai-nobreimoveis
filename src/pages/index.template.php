@@ -64,7 +64,7 @@ require('../components/realstate/realstate.inc.php');
         <?php include('../components/anuncios/anuncios02.inc.php'); ?>
         <?php include('../components/banners/beneficios.inc.php'); ?>
         <?php include('../components/anuncios/bairros.inc.php'); ?>
-        <?php include('../components/testimonials/testimonials.inc.php'); ?>
+        <?php //include('../components/testimonials/testimonials.inc.php'); ?>
         <?php include('../components/footer/footer.inc.php'); ?>
         <?php include('../components/banner-cookie-consent.inc.php'); ?>
         <?php include('../components/modals/identify.inc.php'); ?>

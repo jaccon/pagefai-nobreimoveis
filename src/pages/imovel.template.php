@@ -26,6 +26,7 @@ $ContactInfoName = isAds($id,"ContactInfoName");
 $LocationLatitude = isAds($id,"LocationLatitude");
 $LocationLongitude = isAds($id,"LocationLongitude");
 $VirtualTourLink = isAds($id,"VirtualTourLink");
+$permLink = $siteUrl."/imovel/".$id.".html";
 
 // Rental Fields
 $YearlyTax = isAds($id,"YearlyTax"); // IPTU
@@ -70,7 +71,18 @@ $itemCount = count($data);
 		
 		    <title> <?= $pgTitle; ?> </title>
 
-        <link rel="icon" type="image/png" href="<?= $siteUrl; ?>/assets/images/favicon.png">
+            <link rel="icon" type="image/png" href="<?= $siteUrl; ?>/assets/images/favicon.png">
+
+        <style> 
+            div#pagefai-form-success {
+                margin-top: 20px;
+                font-size: 10px !important;
+            }
+
+            div#pagefai-form-success h3 {
+                font-size: 20px;
+            }
+        </style>
     </head>
 
     <body>
@@ -341,28 +353,92 @@ $itemCount = count($data);
                                     </span>
                                 </div>
 
-                                <form>
+                                <form id="pagefai-form" pagefai-form="true">
+
                                     <div class="form-group mb-3">
                                         <label>Nome completo</label>
-                                        <input type="text" class="form-control">
+                                        <input 
+                                                type="text" 
+                                                name="name" 
+                                                id="name" 
+                                                class="form-control"
+                                                placeholder="Entre com o seu nome..."
+                                                pagefai-form="true"
+                                                required data-error="Entre com o nome">
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <label>Telefone </label>
-                                        <input type="text" class="form-control">
+                                        <input 
+                                                type="text" 
+                                                name="phone" 
+                                                id="phone" 
+                                                placeholder="Telefone"
+                                                pagefai-form="true"
+                                                required data-error="Por favor entre com o número de telefone" 
+                                                class="form-control">
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label>E-mail </label>
+                                        <input 
+                                                type="text" 
+                                                name="email" 
+                                                id="email" 
+                                                placeholder="Digite seu email"
+                                                pagefai-form="true"
+                                                required data-error="Por favor entre com um email válido" 
+                                                class="form-control">
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <label>Sua mensagem</label>
-                                        <textarea name="message" class="form-control"></textarea>
+                                        <textarea 
+                                                name="message" 
+                                                class="form-control" 
+                                                id="message" 
+                                                cols="30" 
+                                                rows="5" 
+                                                pagefai-form="true"
+                                                placeholder="Escreva sua mensagem aqui"
+                                                required data-error="Escreva sua mensagem"></textarea>
                                     </div>
+
+                                    <input 
+                                        class="form-control" 
+                                        name="id" 
+                                        id="id"
+                                        type="hidden"
+                                        pagefai-form="true"
+                                        value="40e01410-c781-11ed-afa1-0242ac120002">
+
+                                    <input 
+                                        class="form-control" 
+                                        name="url" 
+                                        id="url"
+                                        type="hidden"
+                                        pagefai-form="true"
+                                        value="<?= $siteUrl."/imovel/".$id.".html"; ?>">
                                     
-                                    <button type="submit" class="default-btn">
-                                        Enviar Mensagem
-                                        <span></span>
-                                    </button>
+                                                <button 
+                                            id="pagefai-submit-form"
+                                            class="default-btn">Enviar Mensagem <span></span></button>
 
                                 </form>
+
+                                <div id="pagefai-form-success" style="display:none;">
+                                    <h3> Sua mensagem foi enviada com sucesso, em breve iremos responder. </h3>
+                                    <p> Agilize seu atendimento entrando em contato conosco através do Whatsapp, clique no link abaixo e fale agora mesmo <br/><br/>
+
+                                        <a 
+                                            href="<?= Social::shareWhatsapp(CMS::isComponent("b9c29334-d1c8-11ed-afa1-0242ac120002","whatsapp"), "Peguei o contato no site, e gostaria de mais informações sobre o anúncio: ".$permLink, null); ?>" 
+                                            target="_blank"
+                                            class="default-btn"> 
+                                            Falar no Whatsapp </a>
+                                    </p>
+
+                                </div>
+
                             </div>
 
                             <div class="widget widget_fido_property">
@@ -418,115 +494,55 @@ $itemCount = count($data);
                                 <h3 class="widget-title"> Destaques </h3>
 
                                 <div class="top-properties-slides owl-carousel owl-theme">
-                                    <div class="properties-item-box">
-                                        <div class="properties-content">
-                                            <a href="property-details.html"><img src="<?= $siteUrl; ?>/assets/images/featured/featured-large-1.jpg" alt="image"></a>
-                
-                                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-                
-                                            <div class="content-box">
-                                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                                <h3>
-                                                    <a href="property-details.html">Modern Apartment With Pool</a>
-                                                </h3>
-                                                <p>$2,500</p>
-                    
-                                                <ul class="featured-list">
-                                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="properties-item-box">
-                                        <div class="properties-content">
-                                            <a href="property-details.html"><img src="<?= $siteUrl; ?>/assets/images/featured/featured-large-2.jpg" alt="image"></a>
-                
-                                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-                
-                                            <div class="content-box">
-                                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                                <h3>
-                                                    <a href="property-details.html">Luxury Villa in Los Angeles</a>
-                                                </h3>
-                                                <p>$2,500</p>
-                    
-                                                <ul class="featured-list">
-                                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <?php 
+                                    $count = 0;
+                                    $max = 2;
+                                    foreach ($data as $item) {
 
-                                    <div class="properties-item-box">
-                                        <div class="properties-content">
-                                            <a href="property-details.html"><img src="<?= $siteUrl; ?>/assets/images/featured/featured-large-3.jpg" alt="image"></a>
-                
-                                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-                
-                                            <div class="content-box">
-                                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                                <h3>
-                                                    <a href="property-details.html">Blue Reef Properties</a>
-                                                </h3>
-                                                <p>$2,500</p>
-                    
-                                                <ul class="featured-list">
-                                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        if( $item['status'] === 'enabled' && $count <= $max ) {
+                                            $status = $item['status'];
+                                            $title = $item['title'];
+                                            $transactiontype = transactiontypeConvert($item['transactiontype']);
+                                            $listingId = $item['ListingID'];
+                                            $id = $item['id'];
+                                            $ContactInfoName = $item['ContactInfoName'];
+                                            $thumbnail = $item['ContactInfoLogo'];
+                                            $featuredImage = $item['featuredImage'];
+                                            $ConstructedArea = $item['ConstructedArea'];
+                                            $count++;
+                                            
+                                            if($item['transactiontype'] === 'For Rent') {
+                                                $priceL = formatCurrency($item['RentalPrice']);
+                                            } else {
+                                                $priceL = formatCurrency($item['ListPrice']);
+                                            }
+                                    ?>
+                                        <div class="properties-item-box">
+                                            <div class="properties-content">
 
-                                    <div class="properties-item-box">
-                                        <div class="properties-content">
-                                            <a href="property-details.html"><img src="<?= $siteUrl; ?>/assets/images/featured/featured-large-1.jpg" alt="image"></a>
-                
-                                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-                
-                                            <div class="content-box">
-                                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                                <h3>
-                                                    <a href="property-details.html">Modern Apartment With Pool</a>
-                                                </h3>
-                                                <p>$2,500</p>
+                                                <a href="<?= $siteUrl; ?>/imovel/<?= $id; ?>.html"><img src="<?= $featuredImage; ?>" alt="image"></a>
                     
-                                                <ul class="featured-list">
-                                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                                </ul>
+                                                <div class="tag">
+                                                    <?= $transactiontype; ?>
+                                                </div>
+                    
+                                                <div class="content-box">
+                                                    <h3>
+                                                        <a href="<?= $siteUrl; ?>/imovel/<?= $id; ?>.html">
+                                                            <?= $title; ?>
+                                                        </a>
+                                                    </h3>
+                                                    <p>
+                                                        <?= $priceL; ?>
+                                                    </p>
+                        
+                                                    
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="properties-item-box">
-                                        <div class="properties-content">
-                                            <a href="property-details.html"><img src="<?= $siteUrl; ?>/assets/images/featured/featured-large-2.jpg" alt="image"></a>
-                
-                                            <div class="tag"><a href="property-details.html">FEATURED</a></div>
-                
-                                            <div class="content-box">
-                                                <span>64 1st Avenue, High Street, NZ 1002</span>
-                                                <h3>
-                                                    <a href="property-details.html">Luxury Villa in Los Angeles</a>
-                                                </h3>
-                                                <p>$2,500</p>
-                    
-                                                <ul class="featured-list">
-                                                    <li><i class='bx bx-bed'></i> 4 Bedrooms</li>
-                                                    <li><i class='bx bxs-bath'></i> 2 Baths</li>
-                                                    <li><i class='bx bx-car'></i> Free Parking</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <? }} ?>
+                                    
                                 </div>
                             </div>
                         </aside>
@@ -556,6 +572,54 @@ $itemCount = count($data);
         <script src="<?= $siteUrl; ?>/assets/js/contact-form-script.js"></script>
         <script src="<?= $siteUrl; ?>/assets/js/wow.min.js"></script>
         <script src="<?= $siteUrl; ?>/assets/js/main.js"></script>
+
+        <script>
+            async function handleSubmit(event) {
+
+                event.preventDefault();
+            
+                const formElements = document.querySelectorAll('[pagefai-form="true"]');
+                const formElementsArray = Array.from(formElements);
+                
+                const formData = {};
+                formElementsArray.forEach(element => {
+                    formData[element.name] = element.value;
+                });
+                
+                formData.timestamp = new Date().toISOString();
+                
+                const formDataJSON = JSON.stringify(formData);
+                document.cookie = `pagefai-contact-form=${encodeURIComponent(formDataJSON)}; path=/`;
+        
+                try {
+                    const response = await fetch('<?= $siteUrl; ?>/bff?f=submitForm', {
+                    method: 'GET',
+                    headers: {
+                        // You can add headers here if needed
+                    },
+                    });
+
+                    const responseBody = await response.text();
+
+                    console.log(responseBody);
+
+                    if (responseBody.trim() === "0") {
+
+                        const form = document.querySelector('form[pagefai-form="true"]');
+                        form.style.display = 'none';
+                        
+                        const successDiv = document.getElementById('pagefai-form-success');
+                        successDiv.style.display = 'block';
+
+                    } 
+            } catch (error) {
+                console.error(error);
+            }
+            }
+            const submitButton = document.getElementById('pagefai-submit-form');
+            submitButton.addEventListener('click', handleSubmit);
+        </script>
+
     </body>
 
 </html>
