@@ -126,4 +126,6 @@ $phoneNumber02Call = CMS::isComponent($metaId,"phoneNumber02");
     gtag('config', 'G-3Y2Z2PBMYK');
     </script>
 
-    
+    <script>
+        let scrollTimeout;function getCurrentURL(){return window.location.href;}function postData(url,data){return fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),}).then(response=>response.json()).then(data=>console.log('Success:',data)).catch(error=>console.error('Error:',error));}function trackVisit(){const currentURL=getCurrentURL();const apiUrl='/bff?f=visualizer';postData(apiUrl,{url:currentURL});}function handleScroll(){clearTimeout(scrollTimeout);scrollTimeout=setTimeout(function(){trackVisit();},5000);}window.addEventListener('scroll',handleScroll);handleScroll();
+    </script>

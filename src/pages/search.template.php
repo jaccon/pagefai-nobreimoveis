@@ -124,6 +124,15 @@ $itemCount = count($data);
                                     $featuredImage = $item['featuredImage'];
                                     $ConstructedArea = $item['ConstructedArea'];
 
+                                    $RentalPrice = $item['RentalPrice'];
+                                    $listPrice = $item['ListPrice'];
+
+                                    if($item['transactiontype'] === "For Sale") {
+                                        $price = $listPrice;
+                                    } else {
+                                        $price = $RentalPrice;
+                                    }
+
                                     if (
                                         $item['status'] === 'enabled' && 
                                         (
@@ -167,7 +176,7 @@ $itemCount = count($data);
                                             </span>
                                         </div>
                                         <p>
-                                            <strong> <?= formatCurrency($listPrice); ?> </strong> 
+                                            <strong> <?= formatCurrency($price); ?> </strong> 
                                         </p>
                                     </div>
                                 </div>
@@ -263,7 +272,6 @@ $itemCount = count($data);
                                     $transactiontype = transactiontypeConvert($itens['transactiontype']);
                                     $listingId = $itens['ListingID'];
                                     $id = $itens['id'];
-                                    $listPrice = $itens['ListPrice'];
                                     $ContactInfoName = $itens['ContactInfoName'];
                                     $thumbnail = $itens['ContactInfoLogo'];
                                     $featuredImage = $itens['featuredImage'];
@@ -275,6 +283,7 @@ $itemCount = count($data);
                                     $constructedArea = $itens['constructedArea'];
                                     $propertyType = $itens['PropertyType'];
                                     $RentalPrice = $itens['RentalPrice'];
+                                    $listPrice = $itens['ListPrice'];
 
                                     if($transactiontype === "For Sale") {
                                         $price = $listPrice;

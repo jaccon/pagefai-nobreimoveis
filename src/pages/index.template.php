@@ -67,7 +67,7 @@ require('../components/realstate/realstate.inc.php');
         <?php //include('../components/testimonials/testimonials.inc.php'); ?>
         <?php include('../components/footer/footer.inc.php'); ?>
         <?php include('../components/banner-cookie-consent.inc.php'); ?>
-        <?php include('../components/modals/identify.inc.php'); ?>
+        <?php //include('../components/modals/identify.inc.php'); ?>
        
         <div class="go-top">
             <i class='bx bx-chevron-up'></i>

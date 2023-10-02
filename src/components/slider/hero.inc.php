@@ -71,7 +71,7 @@ $siteUrl = $CONFIG['CONF']['siteUrl'];
                             </div>
     
                             <div class="bottom-content">
-                                R$ <?= formatCurrency($price); ?>
+                                <?= formatCurrency($price); ?>
     
                                 <div class="slides-btn">
                                     <a href="<?= $siteUrl; ?>/imovel/<?= $id; ?>.html" class="default-btn"> Ver Imóvel <span></span></a>

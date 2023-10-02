@@ -1,0 +1,22 @@
+{
+    "29237d76-55b1-11ee-aa59-18c04df024a7": {
+        "uuid": "29237d76-55b1-11ee-aa59-18c04df024a7",
+        "updatedAt": "2023-10-02",
+        "views": 2
+    },
+    "contato": {
+        "uuid": "contato",
+        "updatedAt": "2023-10-02",
+        "views": 1
+    },
+    "29241128-55b1-11ee-aa59-18c04df024a7": {
+        "uuid": "29241128-55b1-11ee-aa59-18c04df024a7",
+        "updatedAt": "2023-10-02",
+        "views": 4
+    },
+    "leads": {
+        "uuid": "leads",
+        "updatedAt": "2023-10-02",
+        "views": 1
+    }
+}

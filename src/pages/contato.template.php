@@ -101,6 +101,7 @@ $title = "Contato";
                                                 name="name" 
                                                 id="name" 
                                                 class="form-control"
+                                                maxlength="60"
                                                 placeholder="Entre com o seu nome..."
                                                 pagefai-form="true"
                                                 required data-error="Entre com o nome">
@@ -113,7 +114,8 @@ $title = "Contato";
                                             <label>E-mail</label>
                                             <input 
                                                 type="email" 
-                                                name="email" 
+                                                name="email"
+                                                maxlength="60"
                                                 id="email" class="form-control" 
                                                 placeholder="Digite o endereço de e-mail"
                                                 pagefai-form="true"
@@ -126,9 +128,10 @@ $title = "Contato";
                                         <div class="form-group">
                                             <label>Telefone Celular</label>
                                             <input 
-                                                type="text" 
+                                                type="tel" 
                                                 name="phone" 
                                                 id="phone" 
+                                                maxlength="60"
                                                 placeholder="Telefone"
                                                 pagefai-form="true"
                                                 required data-error="Por favor entre com o número de telefone" 
@@ -148,6 +151,7 @@ $title = "Contato";
                                                 rows="5" 
                                                 pagefai-form="true"
                                                 placeholder="Escreva sua mensagem aqui"
+                                                maxlength="250"
                                                 required data-error="Escreva sua mensagem"></textarea>
                                             <div class="help-block with-errors"></div>
 
@@ -157,6 +161,7 @@ $title = "Contato";
                                                 id="id"
                                                 type="hidden"
                                                 pagefai-form="true"
+                                                maxlength="60"
                                                 value="40e01410-c781-11ed-afa1-0242ac120002">
                                             </div>
                                     </div>

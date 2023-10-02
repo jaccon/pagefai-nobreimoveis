@@ -59,9 +59,7 @@ $address = CMS::isComponent($metaId,"address");
                                     </a>
 
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="/tour-virtual-360.html" class="nav-link"> com Tour Virtual 360º </a>
-                                        </li>
+                                        
                                         <li class="nav-item">
                                             <a href="/imoveis-para-locacao.html" class="nav-link"> Para locação </a>
                                         </li>
@@ -70,6 +68,9 @@ $address = CMS::isComponent($metaId,"address");
                                         </li>
                                         <li class="nav-item">
                                             <a href="/imoveis-lancamentos.html" class="nav-link"> de Lançamento </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="/tour-virtual-360.html" class="nav-link"> com Tour Virtual 360º </a>
                                         </li>
                                     </ul>
                                 </li>

@@ -10,7 +10,7 @@ $CONFIG['CONF']['appVersion']="01.0529.03";
 // PAGEFAI Configuration
 $CONFIG['CONF']['contractId']="64c9ab96286e5c0021ad4c61";
 $CONFIG['CONF']['userId']="64c95ae5286e5c0021ad4c51";
-$CONFIG['CONF']['secrectKey']="xxxxxx";
+$CONFIG['CONF']['secrectKey']="ku4okeem3ahXuRaiyeekae9Xad";
 $CONFIG['CONF']['apiUrl']="https://dash-api-v1.pagefai.com";
 // $CONFIG['CONF']['apiUrl']="http://localhost:3333";
 $CONFIG['CONF']['authorization']="iugeib4Phu6wauphae9NeengiTh1aeXaingezaij5lieVaaxe3IChaengoishahc";
@@ -22,7 +22,7 @@ $CONFIG['CONF']['pixKey']= "26532649864";
 // Site Configuration
 $CONFIG['CONF']['defaultPageTitle']="Andorra";
 $CONFIG['CONF']['siteUrl']="http://localhost:8926/";
-// $CONFIG['CONF']['siteUrl']="https://nobreimoveis.pagefai.com/";
+// $CONFIG['CONF']['siteUrl']="https://www.nobreimoveis.com/";
 $CONFIG['CONF']['metaIdSeo']="0ff54848-c781-11ed-afa1-0242ac120002"; // id meta Seo settings
 $CONFIG['CONF']['metaIdSeoBreadCrumb']="7c3b5a16-440d-11ee-be56-0242ac120002"; // id meta Seo BreadCrumbs
 $CONFIG['CONF']['assets']=$CONFIG['CONF']['siteUrl']."/assets/";
@@ -43,6 +43,7 @@ $CONFIG['CONF']['localImagesRepositoryUrl']="/assets/images";
 $CONFIG['CONF']['remoteCDNStatus']= "disable";
 $CONFIG['CONF']['remoteCDN']= "https://statics.pagefai.com/".$CONFIG['CONF']['contractId']."/";
 $CONFIG['CONF']['debugForms']= false; 
+$CONFIG['CONF']['saveLeads'] = true; 
 
 // Core Application
 include($CONFIG['CONF']['coreDir']."/cms.class.php");

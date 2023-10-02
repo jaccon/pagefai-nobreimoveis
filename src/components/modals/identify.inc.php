@@ -148,25 +148,27 @@ $loader = CMS::getCMSSettings($metaId, "status");
   </script>
 
   <div class="overlay" style="display:none">
-    <div class="modal-container">
-      <div class="modal">
-        <div class="left">
-          <span class="close-button">&#10006;</span>
-          <p class="modalText"> Para uma experiência única, por favor informe seu nome e telefone </p>
-          <form>
-            <label for="name">Nome </label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="phone"> Telefone </label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <span id="submit" class="pagefaiFormSubmit"> Salvar </span>
-
-          </form>
+    <div class="row modal">
+            <div class="col-md-12">
+              <div class="left">
+                <span class="close-button">&#10006;</span>
+                <p class="modalText"> Para uma experiência única, por favor informe seu nome e telefone </p>
+                <form>
+                  <label for="name">Nome </label>
+                  <input type="text" id="name" name="name" required>
+                  
+                  <label for="phone"> Telefone </label>
+                  <input type="tel" id="phone" name="phone" required>
+                  
+                  <span id="submit" class="pagefaiFormSubmit"> Salvar </span>
+          
+                </form>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="right"></div>
+            </div>
         </div>
-        <div class="right"></div>
       </div>
-    </div>
-  </div>
 
 <?php } ?>

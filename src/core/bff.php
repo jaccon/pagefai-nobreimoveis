@@ -18,6 +18,36 @@ if($midlewareFunction === 'newsletter-signup') {
 } elseif ($midlewareFunction === 'login') {
   echo "Send login";
 
+} elseif ($midlewareFunction === 'visualizer') {
+
+  // *** VISUALIZER PAGE VISIT METRICS
+  $requestBody = file_get_contents("php://input");
+  $data = json_decode($requestBody, true);
+  $url = $data['url'];
+  $uuid = basename(parse_url($url, PHP_URL_PATH), '.html');
+  $date=date('Y-m-d');
+
+  $jsonFile = $CONFIG['CONF']['cacheDir']."/views.json";
+
+  $existingData = file_exists($jsonFile) ? json_decode(file_get_contents($jsonFile), true) : [];
+
+  if (is_array($existingData) && array_key_exists($uuid, $existingData)) {
+      $existingData[$uuid]['views']++;
+  } else {
+      $existingData[$uuid] = [
+          'uuid' => $uuid,
+          'updatedAt' => date('Y-m-d'),
+          'views' => 1
+      ];
+  }
+
+  if($uuid) {
+    file_put_contents($jsonFile, json_encode($existingData, JSON_PRETTY_PRINT));
+    // echo json_encode($existingData, JSON_PRETTY_PRINT);
+  }
+  
+
+  // ===== END Visualizer page visit metrics
 } elseif ($midlewareFunction === 'submitForm') {
 
   // *** SUBMIT CONTACT FORM ****
@@ -51,6 +81,8 @@ if($midlewareFunction === 'newsletter-signup') {
         "fields" => $obj1,
         "setup" => $obj2
       ];
+
+      
 
       $preparedDataForm = json_encode($jsonObject, JSON_PRETTY_PRINT);
       // $url = $CONFIG['CONF']['apiUrl']."/mail/".$contractId;
@@ -98,8 +130,36 @@ if($midlewareFunction === 'newsletter-signup') {
           $http_response_header = $http_response_header ?: [];
           $status_line = isset($http_response_header[0]) ? $http_response_header[0] : '';
           preg_match('/^HTTP\/\d+\.\d+\s+(\d+)/', $status_line, $matches);
-      
+
           if (isset($matches[1]) && $matches[1] == 200) {
+
+              // Save Leads CUSTOM - Nobre Imóveis
+              if(isset($obj1['name']) && isset($obj1['email']) && $obj1['phone'] && $CONFIG['CONF']['saveLeads'] === true) {
+
+                // print_r($jsonObject);
+                $leadName = $obj1['name'];
+                $leadEmail = $obj1['email'];
+                $leadPhone = $obj1['phone'];
+                $leadPageId =  $obj1['url'];
+                $leadUpdatedAt = date('Y-m-d');
+
+                $leadData = array(
+                  'leadName' => $leadName,
+                  'leadEmail' => $leadEmail,
+                  'leadPhone' => $leadPhone,
+                  'leadPageId' => $leadPageId,
+                  'leadUpdatedAt' => $leadUpdatedAt
+                );
+
+                $leadFile = $CONFIG['CONF']['cacheDir']."/leads.json";
+                $leads = file_exists($leadFile) ? json_decode(file_get_contents($leadFile), true) : array();
+                $leads[] = $leadData;
+                $leadsJson = json_encode($leads, JSON_PRETTY_PRINT);
+                file_put_contents($leadFile, $leadsJson);
+
+              }
+              // End Save Lead
+              
               echo 0; // 0 to no erros
           } else {
               echo 0; // 0 to no erros

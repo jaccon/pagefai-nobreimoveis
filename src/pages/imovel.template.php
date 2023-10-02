@@ -26,7 +26,15 @@ $ContactInfoName = isAds($id,"ContactInfoName");
 $LocationLatitude = isAds($id,"LocationLatitude");
 $LocationLongitude = isAds($id,"LocationLongitude");
 $VirtualTourLink = isAds($id,"VirtualTourLink");
+$featuredImage = isAds($id,"featuredImage");
 $permLink = $siteUrl."/imovel/".$id.".html";
+
+// SEO
+$metaIdSeo = "0ff54848-c781-11ed-afa1-0242ac120002";
+$siteDescription = Seo::isSeo($metaIdSeo, "description");
+$siteAuthor = Seo::isSeo($metaIdSeo, "author");
+$keywords = Seo::isSeo($metaIdSeo, "keywords");
+$favicon = Seo::isSeo($metaIdSeo, "favicon");
 
 // Rental Fields
 $YearlyTax = isAds($id,"YearlyTax"); // IPTU
@@ -45,7 +53,6 @@ if($transactiontype === 'For Rent') {
 $jsonData = file_get_contents('../cached/realstate-ads.json');
 $data = json_decode($jsonData, true);
 $itemCount = count($data);
-
 ?>
 <!doctype html>
 <html lang="zxx">
@@ -67,11 +74,22 @@ $itemCount = count($data);
         <link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/fancybox.min.css">
         <link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/style.css">
         <link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/dark.css">
-		    <link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/responsive.css">
+		<link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/responsive.css">
 		
-		    <title> <?= $pgTitle; ?> </title>
+        <title> Nobre Imóveis - <?= $title; ?> </title>
+        <meta name="description" content="<?= $title."  ".$description; ?>">
+        <meta name="keywords" content="<?= $keywords; ?>">
+        <meta name="author" content="<?= $siteAuthor; ?>">
 
-            <link rel="icon" type="image/png" href="<?= $siteUrl; ?>/assets/images/favicon.png">
+        <?= Seo::structuredDataOrganization(); // structured data for SEO ?>
+        <?= Seo::structuredDataBreadcrumb(); // structured data breadCrumb for SEO ?>
+
+        <meta property="og:title" content="<?= $title; ?>">
+        <meta property="og:description" content="<?= $title."  ".$description; ?>">
+        <meta property="og:image" content="https://www.nobreimoveis.com//assets/images/logotipo-nobreimoveis.png">
+        <meta property="og:url" content="<?= $siteUrl."/imovel/".$id.".html" ?>>
+
+        <link rel="icon" type="image/png" href="<?= $siteUrl; ?>/assets/images/favicon.png">
 
         <style> 
             div#pagefai-form-success {
@@ -361,6 +379,7 @@ $itemCount = count($data);
                                                 type="text" 
                                                 name="name" 
                                                 id="name" 
+                                                maxlength="60"
                                                 class="form-control"
                                                 placeholder="Entre com o seu nome..."
                                                 pagefai-form="true"
@@ -373,6 +392,7 @@ $itemCount = count($data);
                                                 type="text" 
                                                 name="phone" 
                                                 id="phone" 
+                                                maxlength="60"
                                                 placeholder="Telefone"
                                                 pagefai-form="true"
                                                 required data-error="Por favor entre com o número de telefone" 
@@ -385,6 +405,7 @@ $itemCount = count($data);
                                                 type="text" 
                                                 name="email" 
                                                 id="email" 
+                                                maxlength="60"
                                                 placeholder="Digite seu email"
                                                 pagefai-form="true"
                                                 required data-error="Por favor entre com um email válido" 
@@ -399,6 +420,7 @@ $itemCount = count($data);
                                                 id="message" 
                                                 cols="30" 
                                                 rows="5" 
+                                                maxlength="250"
                                                 pagefai-form="true"
                                                 placeholder="Escreva sua mensagem aqui"
                                                 required data-error="Escreva sua mensagem"></textarea>

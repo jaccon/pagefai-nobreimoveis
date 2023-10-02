@@ -19,6 +19,13 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 767px) {
+  p {
+      font-size: 12px;
+      line-height: 13px;
+  }
+}
 </style>
 
 
